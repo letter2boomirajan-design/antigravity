@@ -15,7 +15,7 @@ export default function App() {
   return (
     <div className="app-container">
       <nav className="navbar">
-        <div className="nav-brand">Wanderlust Store</div>
+        <div className="nav-brand">WanderEcommerce Store</div>
         <div className="nav-user">
           <img
             src={user?.image || "https://ui-avatars.com/api/?name=" + (user?.name || "User")}
