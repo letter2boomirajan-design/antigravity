@@ -1,4 +1,4 @@
-# Wanderlust Store
+# WanderEcommerce Store
 
 A modern, premium e-commerce application built with React and Vite, featuring a polished "Morning Mist" aesthetic and comprehensive shopping functionality.
 
