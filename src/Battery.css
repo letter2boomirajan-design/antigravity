@@ -1,0 +1,104 @@
+.battery-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.battery-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 0;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Card */
+.battery-card {
+  background: #121212;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.battery-card:hover {
+  transform: translateY(-6px);
+}
+
+.status {
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.status.online {
+  background: #00c853;
+}
+
+.status.offline {
+  background: #d32f2f;
+}
+
+/* Battery body */
+.battery {
+  margin: 15px 0;
+  width: 100%;
+  height: 28px;
+  border: 2px solid #555;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Battery fill */
+.battery-level {
+  height: 100%;
+  background: linear-gradient(90deg, #00e676, #1de9b6);
+  transition: width 0.6s ease-in-out;
+}
+
+/* Battery text */
+.battery-text {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Button */
+.charge-btn {
+  width: 100%;
+  padding: 10px;
+  background: #2979ff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.3s ease;
+}
+
+.charge-btn:hover {
+  background: #1565c0;
+}
+
+.charge-btn:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+/* Charging glow animation */
+.battery-card:has(.charge-btn:hover) .battery-level {
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    filter: brightness(1);
+  }
+  to {
+    filter: brightness(1.4);
+  }
+}
